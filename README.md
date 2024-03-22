@@ -1,4 +1,4 @@
-# Visit AwsomeExperienceJapan
+# VisitAwesomeExperienceJapan
 
 ## サービス概要 / Service overview
 日本で得た体験・経験・旅の楽しみを世界に共有できるサービス。
@@ -6,8 +6,8 @@
 
 A service that allows users to share their experiences,
 experiences and travel pleasures gained in Japan with the rest of the world.
-By sharing the costs and time spent,
-the service can lower the hurdle for other users to have the same experience.
+By sharing the costs and time spent, 
+the service can lower the barrier for other users to have the same experience.
 
 例）
 〇〇旅行へ行ってきました。
@@ -21,7 +21,8 @@ even people who don't know the area well can
 It gives an idea of what you want to experience and what you want to experience.
 
 こういった経験を共有することで日本独自のカルチャーや歴史の価値を保存するのに役立てたい
-We want to help preserve Japan's unique cultural and historical values by sharing these experiences.
+By sharing these experiences, 
+we aim to help preserve Japan's unique cultural and historical values for future generations.
 
 ##　想定されるユーザー層
 性別　誰でも
@@ -36,10 +37,10 @@ We want to help preserve Japan's unique cultural and historical values by sharin
 Gender Anyone
 Age Teens to 60s Active generation
 Income Any income
-Habits Daily social networking
+Habits Everyday use of social media.
 Hobbies Travel, food
-Preferences Active, like to experience new things　
-Values Respect for history, culture, food, etc. and want to preserve them for future generations
+Preferences Active, like to experience new things　.
+Values Respect for history, culture, food, etc. and want to preserve them for future generations.
 
 例）
 仲間が欲しいプログラミング初学者
