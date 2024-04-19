@@ -2,9 +2,11 @@
 
 ## サービス概要 / Service overview
 
-日本で得た体験・経験・旅の楽しみを世界に共有できるサービス。
+日本で得た体験・経験・旅の楽しみを世界に共有できるサービス
 
-かかった費用・時間を共有することで他のユーザーが同じ体験を行うハードルを下げることができる。
+かかった費用・時間を共有することで他のユーザーが同じ体験を行うハードルを下げることができる
+
+こういった経験を共有することで日本独自のカルチャーや歴史の価値を保存するのに役立てたい
 
 A service that allows users to share their experiences,
 
@@ -13,8 +15,6 @@ experiences and travel pleasures gained in Japan with the rest of the world.
 By sharing the costs and time spent, 
 
 the service can lower the barrier for other users to have the same experience.
-
-こういった経験を共有することで日本独自のカルチャーや歴史の価値を保存するのに役立てたい
 
 By sharing these experiences, 
 
