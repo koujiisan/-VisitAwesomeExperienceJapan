@@ -65,3 +65,4 @@ Xなど他のSNSにも同時に投稿する機能　各SNSのAPIを通じて実�
 
 ## ER図
 [VAEJ ER図](https://app.diagrams.net/#G1UoNMHhBSxRdIYDfrtg_j3hLtrrZasPlY#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D)
+![](https://gyazo.com/a5391620442630c9270bbf12a67afe78.png)
