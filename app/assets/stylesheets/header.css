@@ -1,0 +1,13 @@
+header {
+  background-color: #41C9E2;
+  color: #fff;
+  width: 100%;
+  height: 90px;
+}
+
+h1 {
+  font-size: 2.25rem;
+  padding-top: 4px;
+  padding-left: 20px;
+  line-height: 1.1;
+}
