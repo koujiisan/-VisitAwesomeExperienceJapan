@@ -6,7 +6,9 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Nunc sit.</p>
     </div>
-    <button class="temp btn">ログイン<button> 
-    <button class="temp2 btn">新規登録<button> 
+    <div>
+      <button class="go-to-login btn">ログイン<button> 
+      <%= link_to "新規登録", new_user_path , class: 'go-to-register btn'%>
+    </div>
   </div>
 </main>
