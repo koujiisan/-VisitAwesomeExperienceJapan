@@ -1,0 +1,9 @@
+ja:
+  common:
+    back_to_top: トップに戻る
+  registration:
+    message: ユーザー登録して最高の体験を探そう！
+    registar_button: ユーザー登録
+  login:
+    message: ログインして最高の体験を探そう！
+    login_button: ログイン

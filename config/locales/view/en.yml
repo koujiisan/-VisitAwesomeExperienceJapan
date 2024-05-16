@@ -1,0 +1,9 @@
+en:
+  common:
+    back_to_top: back_to_top
+  registration:
+    message: Sign up and find the best experiences!
+    registar_button: Sign up
+  login:
+    message: Sign in to find the best experiences!
+    login_button: Sign in

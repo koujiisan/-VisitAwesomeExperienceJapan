@@ -1,13 +1,12 @@
 <%= stylesheet_link_tag "user", "data-turbo-track": "reload" %>
 <div class="main-container">
-  <p>ログインして</br>
-  最高の体験を探そう！</p>
+  <p><%= t('login.message') %></p>
 
   <%= render "form", user: @user %>
 
   <br>
 
   <div class="back-to-top">
-    <%= link_to "Back to top", root_path %>
+    <%= link_to t('common.back_to_top'), root_path %>
   </div>
 </div>
