@@ -37,12 +37,19 @@
   display: block;
   width: 15.625rem;
   height: 3rem;
-  background-color: #41C9E2;
   color: #FFF;
   font-size: 1.75rem;
   margin-top: 2rem;
   margin-left: 2rem;
   border-radius: 0.5rem;
+}
+
+.register {
+  background-color: #41C9E2;
+}
+
+.login {
+  background-color: #008DDA;
 }
 
 .back-to-top {
