@@ -7,7 +7,7 @@
       Nunc sit.</p>
     </div>
     <div>
-      <button class="go-to-login btn">ログイン<button> 
+      <%= link_to "ログイン", login_path , class: 'go-to-login btn'%>
       <%= link_to "新規登録", new_user_path , class: 'go-to-register btn'%>
     </div>
   </div>
