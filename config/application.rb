@@ -14,6 +14,6 @@ module Myapp
     config.autoload_lib(ignore: %w(assets tasks))
 
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
-    config.i18n.default_locale = :ja
+    config.i18n.default_locale = :de
   end
 end
