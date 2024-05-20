@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
+  before_action :require_login
 
   private
 
@@ -11,5 +12,9 @@ class ApplicationController < ActionController::Base
 
   def extract_locale_from_accept_language_header
     request.env['HTTP_ACCEPT_LANGUAGE']&.scan(/^[a-z]{2}/)&.first
+  end
+
+  def not_authenticated
+    redirect_to login_path
   end
 end

@@ -1,4 +1,6 @@
 class UserSessionsController < ApplicationController
+  skip_before_action :require_login, only: %i[new create]
+  
   def new; end
 
   def create
@@ -14,6 +16,6 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to(:users, notice: 'Logged out!')
+    redirect_to root_path, status: :see_other
   end
 end
