@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="modal-area">
+  <div class="user-area">
+    <%= render @user %>
+    <%= link_to "Edit this user", edit_user_path(@user) %> |
+<%
+=begin%>
+ <%= button_to "Destroy this user", @user, method: :delete %> 
+<%
+=end%>
+  </div>
+</div>

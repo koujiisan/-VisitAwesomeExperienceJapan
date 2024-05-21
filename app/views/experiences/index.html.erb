@@ -5,8 +5,5 @@
       <%= render experience %>
     <% end %>
   </div>
-
-  <%= link_to new_experience_path, class: "fixed-button" do %>
-    <i class="fa-solid fa-circle-plus">+</i>
-  <% end %>
+  <%= render partial:"shared/modal", locals: {user: @user} %>
 </div>

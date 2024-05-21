@@ -4,6 +4,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences or /experiences.json
   def index
     @experiences = Experience.all.order(created_at: :desc)
+    @user = current_user # ここで@userを設定
   end
 
   # GET /experiences/1 or /experiences/1.json
