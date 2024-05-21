@@ -2,12 +2,13 @@
 <div class=main-container>
   <div id="experiences">
     <% @experiences.each do |experience| %>
-      <%= render experience %>
-      <p>
-        <%= link_to "Show this experience", experience %>
-      </p>
+      <%= link_to experience do %>
+        <%= render experience %>
+      <% end %>
     <% end %>
   </div>
 
-  <%= link_to "New experience", new_experience_path %>
+  <%= link_to new_experience_path, class: "fixed-button" do %>
+    <i class="fa-solid fa-circle-plus">+</i>
+  <% end %>
 </div>

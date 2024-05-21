@@ -1,32 +1,33 @@
 <div class="experience" %>
-  <p>
+  <p class="title">
     <strong>Title:</strong>
     <%= experience.title %>
   </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= experience.description %>
-  </p>
-
-  <p>
-    <strong>Tag:</strong>
-    <%= experience.tag %>
-  </p>
-
-  <p>
-    <strong>Time:</strong>
-    <%= experience.time %>
-  </p>
-
-  <p>
-    <strong>Cost:</strong>
-    <%= experience.cost %>
-  </p>
-
-  <p>
+  <p class="image">
     <strong>Image:</strong>
     <%= experience.image %>
   </p>
 
+  <div class="disc-area">
+    <p>
+      <strong>Description:</strong>
+      <%= experience.description %>
+    </p>
+
+    <p>
+      <strong>Tag:</strong>
+      <%= experience.tag %>
+    </p>
+
+    <p>
+      <strong>Time:</strong>
+      <%= experience.time.try(:strftime, "%Y-%m-%d") %>
+    </p>
+
+    <p>
+      <strong>Cost:</strong>
+      <%= experience.cost %>
+    </p>
+  </div>
 </div>

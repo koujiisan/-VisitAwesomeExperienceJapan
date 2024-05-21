@@ -3,7 +3,7 @@ class ExperiencesController < ApplicationController
 
   # GET /experiences or /experiences.json
   def index
-    @experiences = Experience.all
+    @experiences = Experience.all.order(created_at: :desc)
   end
 
   # GET /experiences/1 or /experiences/1.json

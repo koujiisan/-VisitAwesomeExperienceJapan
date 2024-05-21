@@ -5,3 +5,4 @@
 //= link footer.css
 //= link user.css
 //= link experience.css
+//= link application.css

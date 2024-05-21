@@ -12,7 +12,40 @@
   width: 20rem;
   margin: 1rem auto;
   background-color: #008DDA;
-  height: 18.75rem;
+  height: 25rem;
   color: white;
   border-radius: 2rem;
+}
+
+.experience p {
+  font-size: 1.25rem;
+}
+
+.title {
+  font-weight: bold;
+  margin: 1rem 0 0 1rem;
+}
+
+.image {
+  width: 80%;
+  margin: 0.5rem auto;
+  height: 9rem;
+  background-color: gray;
+  border-radius: 1rem;
+}
+
+.disc-area {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.fixed-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
 }
