@@ -23,15 +23,15 @@
 
 .title {
   font-weight: bold;
-  margin: 1rem 0 0 1rem;
+  margin: 0.5rem 0 0 1rem;
 }
 
 .image {
   width: 80%;
   margin: 0.5rem auto;
-  height: 9rem;
+  height: 10rem;
   background-color: gray;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .disc-area {
