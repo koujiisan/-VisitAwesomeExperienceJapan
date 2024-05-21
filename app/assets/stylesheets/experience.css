@@ -9,12 +9,14 @@
 .experience {
   display: flex;
   flex-direction: column;
-  width: 20rem;
-  margin: 1rem auto;
   background-color: #008DDA;
-  height: 25rem;
-  color: white;
   border-radius: 2rem;
+  border-style: none;
+  color: white;
+  opacity: 0.8;
+  margin: 1rem auto;
+  height: 25rem;
+  width: 20rem;
 }
 
 .experience p {
@@ -37,7 +39,8 @@
 .disc-area {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem;
+  text-align: right;
+  margin: 0 2rem 1rem 0;
 }
 
 .fixed-button {

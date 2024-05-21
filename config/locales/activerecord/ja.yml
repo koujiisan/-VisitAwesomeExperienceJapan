@@ -2,9 +2,17 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      experiences: 体験
     attributes:
       user:
         email: メールアドレス
         name: ユーザーネーム
         password: パスワード
         password_confirmation: パスワード確認
+      experience:
+        title: タイトル
+        description: 説明
+        tag: タグ
+        time: 体験日時
+        image: 画像
+        cost: 体験費用

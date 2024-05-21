@@ -1,10 +1,8 @@
 <%= stylesheet_link_tag "experience", "data-turbo-track": "reload" %>
 <div class=main-container>
   <div id="experiences">
-    <% @experiences.each do |experience| %>
-      <%= link_to experience do %>
-        <%= render experience %>
-      <% end %>
+    <% @experiences.each do |experience| %>      
+      <%= render experience %>
     <% end %>
   </div>
 
