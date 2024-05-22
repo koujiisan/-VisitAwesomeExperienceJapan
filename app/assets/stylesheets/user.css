@@ -57,10 +57,22 @@
   margin-bottom: 0.5rem;
 }
 
+
 .modal-area {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: black;
+  border-radius: 1rem;
+  color: white;
+  opacity: 0.8;
+  margin: 0 auto;
+  height: 60vh;
+  width: 80vw;
+}
+
+.user-area {
+  padding: 1rem;
 }
 
 .prf-modal-innner {
@@ -75,6 +87,12 @@
 
 .prf-image {
   margin: 0 auto;
+  object-fit: contain;
+}
+
+.back-btn {
+  margin-top: 1rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 900px) {

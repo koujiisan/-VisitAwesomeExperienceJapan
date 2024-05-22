@@ -6,7 +6,7 @@
       <h1> Visit Awesome <br> Experience Japan</h1>
     </div>
     <div class="avatar">
-      <%= link_to "#", data: { toggle: "modal", target: "#prf-modal" } do %>
+      <%= link_to user_path(@user) do %>
         <%= image_tag "avatar.png", size: "16x16", alt: "avatar" %>
       <% end %>
     </div>

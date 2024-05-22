@@ -16,10 +16,6 @@ class ProfilesController < ApplicationController
 
   def edit
     @user = current_user
-    @profile = current_user.profile || current_user.build_profile
-    if @profile.nil?
-      redirect_to new_profile_path
-    end
   end
 
   def update

@@ -19,24 +19,3 @@ h1 {
   height: 4rem;
   width: 4rem;
 }
-
-.mask {
-  text-align: center;
-}
-
-.modal-area {
-  background-color: black;
-  border-radius: 1rem;
-  color: white;
-  opacity: 0.8;
-  position: fixed;
-  top: 100px;
-  left: calc(80vw - 70%);
-  height: 60vh;
-  width: 80vw;
-  z-index: 1;
-}
-
-.user-area {
-  padding: 1rem;
-}

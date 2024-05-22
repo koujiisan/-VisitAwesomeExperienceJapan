@@ -3,37 +3,35 @@
 <div class="main-container">
   <h1>Editing Profile</h1>
 
-  <%= form_with(model: @user, local: true) do |form| %>
-    <% if @user.errors.any? %>
+  <%= form_with(model: @profile, local: true) do |form| %>
+    <% if @profile.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+        <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this user from being saved:</h2>
 
         <ul>
-          <% @user.errors.full_messages.each do |message| %>
+          <% @profile.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
         </ul>
       </div>
     <% end %>
-
+    <p>user_name: <%= @profile.user.name %></p>
     <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.label :self_introduce %>
+      <%= form.text_field :self_introduce %>
     </div>
 
     <div class="field">
-      <%= form.label :email %>
-      <%= form.text_field :email %>
+      <%= form.label :image %>
+      <%= form.file_field :image %>
     </div>
 
     <div class="actions">
       <%= form.submit %>
     </div>
   <% end %>
-
-  <br>
-
   <div>
+    <%= link_to 'Back', @profile.user %>
     <%= link_to "Back to Home", experiences_path %>
   </div>
 </div>

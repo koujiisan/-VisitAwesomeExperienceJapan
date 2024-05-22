@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<div class="main-container">
+  <p style="color: green"><%= notice %></p>
+  <div id="prf-modal" class="modal-area hidden">
+      <%= render @user %>
+      <%= link_to "Edit this profile", edit_profile_path(@user) %>
+      <%= link_to "Edit this user", edit_user_path(@user) %>
+      <%= link_to "ログアウト", logout_path, data: { turbo_method: :delete, turbo_confirm: "ログアウトしますか？" } %>
+  </div>
 
-<%= render @user %>
-
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to Home", experiences_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+  <div class="back-btn">
+    <%= link_to "Back to Home", experiences_path %>
+  </div>
 </div>
