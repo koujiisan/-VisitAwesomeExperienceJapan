@@ -5,10 +5,10 @@
     <div class="flex-1">
       <h1> Visit Awesome <br> Experience Japan</h1>
     </div>
-    <div class="flex-none gap-2">
-      <div class="avatar">
+    <div class="avatar">
+      <%= link_to "#", data: { toggle: "modal", target: "#prf-modal" } do %>
         <%= image_tag "avatar.png", size: "16x16", alt: "avatar" %>
-      </div>
+      <% end %>
     </div>
   </div>
 </header>

@@ -1,18 +1,16 @@
-<div id="<%= dom_id user %>">
+<%= stylesheet_link_tag "user", "data-turbo-track": "reload" %>
+<div class="prf-modal-innner">
   <p>
-    <strong>Name:</strong>
     <%= current_user.name %>
   </p>
   <p>
-    <strong>Image:</strong>
     <% if current_user.profile && current_user.profile.image.attached? %>
-      <%= image_tag url_for(current_user.profile.image) %>
+      <%= image_tag url_for(current_user.profile.image), class: "prf-image", size: "200*200", alt: "avatar" %>
     <% else %>
       No image attached
     <% end %>
   </p>
   <p>
-    <strong>self_introduce:</strong>
     <% if current_user.profile.self_introduce %>
       <%= current_user.profile.self_introduce %>
     <% else %>

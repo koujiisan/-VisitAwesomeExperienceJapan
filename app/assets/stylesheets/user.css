@@ -57,6 +57,26 @@
   margin-bottom: 0.5rem;
 }
 
+.modal-area {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.prf-modal-innner {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.prf-modal-innner p {
+  margin: 0.5rem;
+}
+
+.prf-image {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 900px) {
   .main-container p {
     margin-left: 5rem;
