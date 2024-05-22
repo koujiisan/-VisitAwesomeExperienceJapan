@@ -1,9 +1,14 @@
 <div id="<%= dom_id user %>">
   <p>
     <strong>Name:</strong>
-    <%= user.name %>
+    <%= current_user.name %>
   </p>
   <p>
     <strong>Image:</strong>
+    <% if current_user.profile && current_user.profile.image.attached? %>
+      <%= image_tag url_for(current_user.profile.image) %>
+    <% else %>
+      No image attached
+    <% end %>
   </p>
 </div>

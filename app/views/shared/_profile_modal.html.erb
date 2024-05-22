@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="modal-area">
+  <div class="user-area">
+    <%= render @user %>
+    <%= link_to "Edit this profile", edit_profile_path(@user) %>
+    <%= link_to "Edit this user", edit_user_path(@user) %>
+    <%= link_to "ログアウト", logout_path, data: { turbo_method: :delete } %>
+<%
+=begin%>
+ <%= button_to "Destroy this user", @user, method: :delete %> 
+<%
+=end%>
+  </div>
+</div>

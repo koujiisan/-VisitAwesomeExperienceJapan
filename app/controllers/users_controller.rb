@@ -6,15 +6,13 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @user = User.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @user = User.new(user_params)
@@ -42,7 +40,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy!
 
-    redirect_to users_url
+    redirect_to root_path, status: :see_other
   end
 
   private
@@ -53,6 +51,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation, profile_attributes: [:self_introduce, :image])
     end
 end
