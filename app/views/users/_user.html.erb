@@ -11,4 +11,12 @@
       No image attached
     <% end %>
   </p>
+  <p>
+    <strong>self_introduce:</strong>
+    <% if current_user.profile.self_introduce %>
+      <%= current_user.profile.self_introduce %>
+    <% else %>
+      No image attached
+    <% end %>
+  </p>
 </div>
