@@ -1,3 +1,5 @@
+/* 共通部分 */
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +13,7 @@
   margin-top: 2rem;
 }
 
+/* ユーザー登録 */
 .form {
   display: flex;
   flex-direction: column;
@@ -48,6 +51,8 @@
   background-color: #41C9E2;
 }
 
+/* ログイン */
+
 .login {
   background-color: #008DDA;
 }
@@ -57,6 +62,7 @@
   margin-bottom: 0.5rem;
 }
 
+/* モーダルエリア */
 
 .modal-area {
   display: flex;
@@ -78,16 +84,12 @@
 .prf-modal-innner {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  /* justify-content: center; */
+  margin: 0 auto 1rem auto;
 }
 
 .prf-modal-innner p {
-  margin: 0.5rem;
-}
-
-.prf-image {
-  margin: 0 auto;
-  object-fit: contain;
+  margin: 0.5rem 0;
 }
 
 .back-btn {
@@ -95,10 +97,91 @@
   text-align: center;
 }
 
+/* edit-user */
+.edit-user-info {
+  background-color: #008DDA;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 60vh;
+  margin: 1rem auto 0 auto
+}
+
+.edit-user-info h1 {
+  margin-top: 1rem;
+}
+
+.edit-user-info .form-text-field {
+  color: black;
+  margin-left: 0.4rem;
+  text-align: center;
+  width: 18rem;
+}
+
+.btn-update {
+  border-radius: 0.5rem;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-size: 1.75rem;
+  margin: 2rem auto 0 auto;
+  height: 3rem;
+  width: 15.625rem;
+}
+
+.update {
+  background-color: #41C9E2;
+}
+
+.back-area {
+  text-align: center;
+}
+
+/* edit-profile */
+.edit-prf-info {
+  background-color: #008DDA;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 60vh;
+  margin: 1rem auto 0 auto
+}
+
+.edit-prf-info h1 {
+  margin-top: 1rem;
+}
+
+.edit-prf-info .form-label {
+  margin-left: 0.4rem;
+}
+
+.edit-prf-info .form-text-field {
+  color: black;
+  margin-left: 0.4rem;
+  text-align: center;
+  width: 18rem;
+}
+
+.prf-back-area {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
 @media screen and (min-width: 900px) {
-  .main-container p {
-    margin-left: 5rem;
+  .main-container {
+    text-align: center;
   }
+
+  .edit-prf-info h1 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
   .form {
     margin: 0 auto 1rem auto 
   }

@@ -1,9 +1,20 @@
 en:
   common:
     back_to_top: back_to_top
+    back_to_show: back_to_profile
+    login: login
+    logout: logout
+  confirm:
+    update: Update?
+    delete: Delete?
+    logout: Logout?
   registration:
     message: Sign up and find the best experiences!
     registar_button: Sign up
   login:
     message: Sign in to find the best experiences!
     login_button: Sign in
+  profile:
+    edit: EditProfile
+  user:
+    edit: EditUserInformation

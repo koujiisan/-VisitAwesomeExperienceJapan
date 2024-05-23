@@ -1,37 +1,38 @@
 <%= stylesheet_link_tag "user", "data-turbo-track": "reload" %>
 
 <div class="main-container">
-  <h1>Editing Profile</h1>
+  <div class="edit-prf-info">
+    <h1><%= t('profile.edit') %></h1>
+    <%= form_with(model: @profile, local: true) do |form| %>
+      <% if @profile.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-  <%= form_with(model: @profile, local: true) do |form| %>
-    <% if @profile.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @profile.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <p><%= @profile.user.name %></p>
+      <div class="field">
+        <%= form.label :self_introduce, class: 'form-label' %>
+        <%= form.text_field :self_introduce, class: 'form-text-field'%>
+      </div>
 
-        <ul>
-          <% @profile.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
+      <div class="field">
+        <%= form.label :image, class: 'form-label' %>
+        <%= form.file_field :image %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit class: "btn-update update", data: {turbo_confirm: t('confirm.update') } %>
       </div>
     <% end %>
-    <p>user_name: <%= @profile.user.name %></p>
-    <div class="field">
-      <%= form.label :self_introduce %>
-      <%= form.text_field :self_introduce %>
-    </div>
-
-    <div class="field">
-      <%= form.label :image %>
-      <%= form.file_field :image %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-  <% end %>
-  <div>
-    <%= link_to 'Back', @profile.user %>
-    <%= link_to "Back to Home", experiences_path %>
+  </div>
+  <div class="prf-back-area">
+    <%= link_to t('common.back_to_show'), @user %> |
+    <%= link_to t('common.back_to_top'), experiences_path %>
   </div>
 </div>
