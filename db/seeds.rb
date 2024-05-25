@@ -8,8 +8,20 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Experience.create([
-  { title: 'Experience 1', description: 'Description for experience 1', tag: 'Tag1', time: '2024-05-16 10:00:00', cost: '1000', image: 'image1.jpg' },
-  { title: 'Experience 2', description: 'Description for experience 2', tag: 'Tag2', time: '2024-05-17 11:00:00', cost: '2000', image: 'image2.jpg' },
-  # 他のデータも追加可能
-])
+# db/seeds.rb
+
+# ユーザーを作成
+user = User.create!(
+  name: 'Test User',
+  email: 'test@example.com',
+  password: 'password',
+  password_confirmation: 'password',
+)
+
+# ユーザーに関連付けられた経験を作成
+10.times do |i|
+  user.experiences.create!(
+    title: "Experience #{i + 1}",
+    description: "This is a description for Experience #{i + 1}."
+  )
+end

@@ -1,28 +1,24 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: %i[ show edit update destroy ]
+  before_action :set_current_user
 
-  # GET /experiences or /experiences.json
   def index
     @experiences = Experience.all.order(created_at: :desc)
-    @user = current_user # ここで@userを設定
   end
 
-  # GET /experiences/1 or /experiences/1.json
   def show
+    @experience = Experience.find(params[:id])
   end
 
-  # GET /experiences/new
   def new
     @experience = Experience.new
   end
 
-  # GET /experiences/1/edit
   def edit
   end
 
-  # POST /experiences or /experiences.json
   def create
-    @experience = Experience.new(experience_params)
+    @experience = current_user.experiences.build(experience_params)
 
     respond_to do |format|
       if @experience.save
@@ -35,7 +31,6 @@ class ExperiencesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /experiences/1 or /experiences/1.json
   def update
     respond_to do |format|
       if @experience.update(experience_params)
@@ -48,7 +43,6 @@ class ExperiencesController < ApplicationController
     end
   end
 
-  # DELETE /experiences/1 or /experiences/1.json
   def destroy
     @experience.destroy!
 
@@ -59,13 +53,15 @@ class ExperiencesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_experience
       @experience = Experience.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def experience_params
       params.require(:experience).permit(:title, :description, :tag, :time, :cost, :image)
+    end
+
+    def set_current_user
+      @user = current_user
     end
 end

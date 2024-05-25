@@ -4,9 +4,9 @@
   </p>
 
   <p class="image">
-    <%= experience.image %>
+    <%= image_tag(experience.image) if experience.image.attached? %>
   </p>
-  <%= link_to experience do %>
+  <%= link_to experience_path(experience) do %>
     <div class="disc-area">
       <p>
         <%= experience.time.try(:strftime, "%Y-%m-%d") %>
@@ -15,7 +15,7 @@
         <%= experience.description %>
       </p>
       <p>
-        ユーザー名
+        <%= experience.user.name %>
       </p>
       <p>
         <%= experience.tag %>
