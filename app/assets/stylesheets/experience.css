@@ -38,16 +38,73 @@
 .disc-area {
   display: flex;
   flex-direction: column;
-  text-align: right;
-  margin: 0 2rem 1rem 0;
+  text-align: left;
+  margin: 0 0 1rem 2rem;
 }
 
-.fixed-button {
+.disc {
+  white-space: pre-wrap;
+}
+
+.new-button {
   position: fixed;
-  right: 20px;
   bottom: 20px;
-  background-color: blue;
-  color: white;
-  padding: 10px;
+  right: 20px;
+  background-color: #ACE2E1;
   border-radius: 50%;
+  color: white;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1.2;
+  padding: 10px;
+  text-align: center;
+}
+
+.new {
+  height: 35rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  margin-left: 2rem;
+}
+
+.form-text-field {
+  border-radius: 0.25rem;
+  color: black;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  margin-left: 2rem;
+  height: 2rem;
+  width: 15rem;
+}
+
+.form-text-area {
+  border-radius: 0.25rem;
+  color: black;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  margin-left: 2rem;
+  height: 6rem;
+  width: 15rem;
+}
+
+.postting-button {
+  background-color: #41C9E2;
+  border-radius: 0.5rem;
+  color: #FFF;
+  display: block;
+  font-size: 1.75rem;
+  margin: 1rem auto 0 auto;
+  height: 3rem;
+  width: 15.625rem;
+}
+
+.back-area {
+  text-align: center;
+  margin-bottom: 1rem;
 }

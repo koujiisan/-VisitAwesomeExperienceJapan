@@ -1,9 +1,7 @@
-<h1>New experience</h1>
-
-<%= render "form", experience: @experience %>
-
-<br>
-
-<div>
-  <%= link_to "Back to experiences", experiences_path %>
+<%= stylesheet_link_tag "experience", "data-turbo-track": "reload" %>
+<div class="main-container">
+    <%= render "form", experience: @experience %>
+    <div class="back-area">
+      <%= link_to "Back to experiences", experiences_path %>
+    </div>
 </div>

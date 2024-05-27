@@ -1,47 +1,44 @@
-<%= form_with(model: experience) do |form| %>
-  <% if experience.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(experience.errors.count, "error") %> prohibited this experience from being saved:</h2>
+<% if experience.errors.any? %>
+  <div style="color: red">
+    <h2><%= pluralize(experience.errors.count, "error") %> prohibited this experience from being saved:</h2>
 
-      <ul>
-        <% experience.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div>
-    <%= form.label :tag, style: "display: block" %>
-    <%= form.text_field :tag %>
-  </div>
-
-  <div>
-    <%= form.label :time, style: "display: block" %>
-    <%= form.datetime_field :time %>
-  </div>
-
-  <div>
-    <%= form.label :cost, style: "display: block" %>
-    <%= form.text_field :cost %>
-  </div>
-
-  <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <ul>
+      <% experience.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
+<div class="experience new">
+  <%= form_with(model: experience) do |form| %>
+
+    <div>
+      <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-text-field' %>
+    </div>
+    <div>
+      <%= form.label :time, class: 'form-label' %>
+      <%= form.datetime_field :time, class: 'form-text-field' %>
+    </div>
+    <div>
+      <%= form.label :description, class: 'form-label' %>
+      <%= form.text_area :description, class: 'form-text-area' %>
+    </div>
+    <div>
+      <%= form.label :tag, class: 'form-label' %>
+      <%= form.text_field :tag, class: 'form-text-field' %>
+    </div>
+    <div>
+      <%= form.label :cost, class: 'form-label' %>
+      <%= form.text_field :cost, class: 'form-text-field' %>
+    </div>
+    <div>
+      <%= form.label :image, class: 'form-label' %>
+      <%= form.file_field :image, class: 'form-text-field' %>
+    </div>
+
+    <div>
+      <%= form.submit "投稿", class:"postting-button" %>
+    </div>
+  <% end %>
+</div>

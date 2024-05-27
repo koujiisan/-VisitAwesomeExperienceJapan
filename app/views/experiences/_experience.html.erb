@@ -8,18 +8,10 @@
   </p>
   <%= link_to experience_path(experience) do %>
     <div class="disc-area">
-      <p>
-        <%= experience.time.try(:strftime, "%Y-%m-%d") %>
-      </p>
-      <p>
-        <%= experience.description %>
-      </p>
-      <p>
-        <%= experience.user.name %>
-      </p>
-      <p>
-        <%= experience.tag %>
-      </p>
+      <p><%= experience.time.try(:strftime, "%Y-%m-%d") %></p>
+      <p class="disc"><%= experience.description %></p>
+      <p><%= experience.user.name %></p>
+      <p><%= experience.tag %></p>
     </div>
   <% end %>
 </div>
