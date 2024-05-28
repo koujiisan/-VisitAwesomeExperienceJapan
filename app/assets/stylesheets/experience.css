@@ -66,6 +66,10 @@
   height: 35rem;
 }
 
+.show {
+  height: 35rem;
+}
+
 .form-label {
   display: block;
   font-size: 1rem;
@@ -102,6 +106,25 @@
   margin: 1rem auto 0 auto;
   height: 3rem;
   width: 15.625rem;
+}
+
+.edit-area {
+  bottom: 1.5rem;
+  right: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  position: absolute;
+  justify-content: space-between;
+  width: 4rem;
+}
+
+.edit {
+  color: black;
+}
+
+.delete {
+  color: red;
 }
 
 .back-area {

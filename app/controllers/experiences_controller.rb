@@ -40,10 +40,7 @@ class ExperiencesController < ApplicationController
 
   def destroy
     @experience.destroy!
-    respond_to do |format|
-      format.html { redirect_to experiences_url, notice: "Experience was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to experiences_path, status: :see_other
   end
 
   private

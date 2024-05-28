@@ -1,32 +1,35 @@
-<div class="experience">
-  <p class="title">
-    <%= @experience.title %>
-  </p>
+<%= stylesheet_link_tag "experience", "data-turbo-track": "reload" %>
+<div class="main-container">
+  <div class="experience show">
+    <p class="title">
+      <%= @experience.title %>
+    </p>
 
-  <p class="image">
-    <%= image_tag(@experience.image) if @experience.image.attached? %>
-  </p>
+    <p class="image">
+      <%= image_tag(@experience.image) if @experience.image.attached? %>
+    </p>
 
-  <div class="disc-area">
-    <p>
-      <%= @experience.time.try(:strftime, "%Y-%m-%d") %>
-    </p>
-    <p>
-      <%= @experience.description %>
-    </p>
-    <p>
-      ユーザー名:<%= @experience.user.name %>
-    </p>
-    <p>
-      <%= @experience.tag %>
-    </p>
+    <div class="disc-area">
+      <p><%= @experience.user.name %></p>
+      <p><%= @experience.time.try(:strftime, "%Y-%m-%d") %></p>
+      <p class="disc"><%= @experience.description %></p>
+      <p><%= @experience.tag %></p>
+      <p><%= @experience.cost %></p>
+    </div>
+
+    <% if @experience.user == current_user %>
+      <div class="edit-area">
+        <%= link_to edit_experience_path(@experience) do %>
+          <i class="fa-solid fa-pencil edit"></i>
+        <% end %>
+        <%= link_to experience_path(@experience), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } do %>
+          <i class="fa-solid fa-trash delete"></i>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 
-  <% if @experience.user == current_user %>
-    <%= link_to '編集', edit_experience_path(@experience) %>
-  <% end %>
-</div>
-
-<div>
-  <%= link_to "Back to experiences", experiences_path %>
+  <div class="back-area">
+    <%= link_to "Back to experiences", experiences_path %>
+  </div>
 </div>
