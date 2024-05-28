@@ -6,3 +6,4 @@
 //= link user.css
 //= link experience.css
 //= link application.css
+//= link comment.css

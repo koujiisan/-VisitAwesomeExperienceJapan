@@ -8,6 +8,8 @@ class ExperiencesController < ApplicationController
 
   def show
     @experience = Experience.find(params[:id])
+    @comments = @experience.comments.order(created_at: :desc)
+    @comment = Comment.new
   end
 
   def new

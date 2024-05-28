@@ -1,0 +1,12 @@
+<div class="comment-area">
+  <h2>Comments</h2>
+
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      ---------------------
+      <p><%= comment.body %></p>
+      <p><small>Posted by <%= comment.user.name %></p>
+      <p>at <%= comment.created_at.try(:strftime, "%Y-%m-%d") %></small></p>
+    </div>
+  <% end %>
+</div>

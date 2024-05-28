@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "comment", "data-turbo-track": "reload" %>
+<%= form_with(model: [ @experience, @experience.comments.build ], local: true) do |form| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-area">
+    <div class="field">
+      <%= form.label "コメントを投稿する", class:"form-label" %>
+      <%= form.text_area :body, class:"form-text-field" %>
+    </div>
+
+    <div class="actions add-comment">
+      <%= form.submit "コメント"%>
+    </div>
+  </div>
+<% end %>
