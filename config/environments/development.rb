@@ -75,4 +75,6 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 
   config.log_level = :debug
+
+  config.web_console.permissions = '192.168.0.0/16'
 end

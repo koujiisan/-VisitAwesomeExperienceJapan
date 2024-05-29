@@ -1,0 +1,3 @@
+<%= link_to experience_likes_path(experience), data: { turbo_method: :post, turbo_frame: "like-button-for-experience-#{experience.id}" } do %>
+  <i class="fa-regular fa-heart"></i>
+<% end %>

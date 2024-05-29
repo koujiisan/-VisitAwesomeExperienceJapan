@@ -18,8 +18,8 @@
       <%= form.text_area :body, class:"form-text-field" %>
     </div>
 
-    <div class="actions add-comment">
-      <%= form.submit "コメント"%>
-    </div>
+    <%= button_tag(type: 'submit') do %>
+      <i class="fa-solid fa-share-from-square add-comment"></i>
+    <% end %>
   </div>
 <% end %>

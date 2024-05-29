@@ -14,4 +14,14 @@
       <p><%= experience.tag %></p>
     </div>
   <% end %>
+  <div class="ex-item">
+    <p class="comment-count"><i class="fa-regular fa-comment"></i> <%= experience.comments.count %></p>
+    <div id="like-button-for-experience-<%= experience.id %>">
+      <% if current_user.likes?(experience) %>
+        <%= render 'like/unlike', experience: experience %>
+      <% else %>
+        <%= render 'like/like', experience: experience %>
+      <% end %>
+    </div>
+  </div>
 </div>

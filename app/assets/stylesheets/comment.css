@@ -1,9 +1,17 @@
 .form-area {
+  position: relative;
   background-color: black;
   border-radius: 0.5rem;
   margin: 0.5rem auto;
   height: 6rem;
   width: 80%;
+}
+
+.add-comment {
+  color: white;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
 }
 
 .comment-area {
@@ -15,11 +23,6 @@
   width: 80%;
 }
 
-.add-comment {
-  color: white;
-  text-align: right;
-  margin-right: 1rem;
-}
 
 .form-label {
   display: block;

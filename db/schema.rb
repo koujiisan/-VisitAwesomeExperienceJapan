@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_28_193856) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_28_230420) do
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -65,6 +65,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_193856) do
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
+  create_table "likes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "experience_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["experience_id"], name: "index_likes_on_experience_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "profiles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "self_introduce"
@@ -89,5 +98,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_193856) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "experiences"
   add_foreign_key "comments", "users"
+  add_foreign_key "likes", "experiences"
+  add_foreign_key "likes", "users"
   add_foreign_key "profiles", "users"
 end

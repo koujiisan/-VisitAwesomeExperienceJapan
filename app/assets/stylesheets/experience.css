@@ -46,6 +46,19 @@
   white-space: pre-wrap;
 }
 
+.ex-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 5rem;
+  font-size: 1.25rem;
+  margin: 1rem 0 0 2rem;
+}
+
+.like {
+  color: pink;
+}
+
 .new-button {
   position: fixed;
   bottom: 20px;
