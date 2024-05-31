@@ -6,6 +6,3 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-import ProfileModalController from "./profile_modal_controller"
-application.register("profile-modal", ProfileModalController)
