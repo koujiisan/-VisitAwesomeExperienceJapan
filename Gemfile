@@ -53,7 +53,7 @@ gem "carrierwave"
 
 gem "rails-i18n", '~> 7.0.0'
 
-gem 'webpacker'
+# gem 'webpacker'
 
 gem 'pry-rails'
 
