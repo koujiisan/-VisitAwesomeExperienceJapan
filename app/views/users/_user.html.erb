@@ -11,7 +11,7 @@
     <% end %>
   </p>
   <p>
-    <% if current_user.profile.self_introduce %>
+    <% if current_user.profile && current_user.profile.self_introduce %>
       <%= current_user.profile.self_introduce %>
     <% else %>
       No image attached
