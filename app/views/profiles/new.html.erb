@@ -1,31 +1,37 @@
-<h1>New Profile</h1>
+<%= stylesheet_link_tag "user", "data-turbo-track": "reload" %>
+<div class="main-container">
+  <div class="edit-prf-info">
+    <%= form_with(model: @profile, local: true) do |form| %>
+      <% if @profile.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
-<%= form_with(model: @profile, local: true) do |form| %>
-  <% if @profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+          <ul>
+            <% @profile.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-      <ul>
-        <% @profile.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="field">
+        <%= form.label :self_introduce, class: 'form-label' %>
+        <%= form.text_area :self_introduce, class: 'form-text-field' %>
+      </div>
 
-  <div class="field">
-    <%= form.label :self_introduce %>
-    <%= form.text_area :self_introduce %>
+      <div class="field">
+        <%= form.label :image, class: 'form-label' %>
+        <%= form.file_field :image %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit class: "btn-update update", data: {turbo_confirm: t('confirm.update') } %>
+      </div>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+  <div class="prf-back-area">
+    <%= link_to t('common.back_to_show'), @user %> |
+    <%= link_to t('common.back_to_top'), experiences_path %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', @profile.user %>
+</div>

@@ -2,7 +2,8 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:edit, :update]
 
   def new
-    @profile = current_user.build_profile
+    @user = current_user
+    @profile = @user.build_profile
   end
 
   def create
@@ -16,6 +17,11 @@ class ProfilesController < ApplicationController
 
   def edit
     @user = current_user
+    @profile = current_user.profile
+
+    unless @profile
+      redirect_to new_profile_path
+    end
   end
 
   def update
