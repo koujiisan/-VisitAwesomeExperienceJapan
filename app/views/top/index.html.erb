@@ -1,14 +1,14 @@
 <%= stylesheet_link_tag "top", "data-turbo-track": "reload" %>
 <main>
   <div class="main-container">
-    <div class="description">
-    <div class="description-text">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Nunc sit.</p>
-    </div>
-    <div>
-      <%= link_to t('login.login_button'), login_path , class: 'go-to-login btn'%>
-      <%= link_to t('registration.registar_button'), new_user_path , class: 'go-to-register btn'%>
-    </div>
+    <%= image_tag src="image.png", class: "image", size: "300x300" %>
+      <h2>VAEJで最高の体験を共有しよう!</h2>
+    <ul>
+      <li>このアプリは体験のコストを共有</li>
+      <li>みんなで体験ハードルを下げよう！</li>
+    </ul>
+    <p>* 体験を共有するにはユーザー登録が必要です</p>
+    <%= link_to t('login.login_button'), login_path , class: 'go-to-login btn'%>
+    <%= link_to t('registration.registar_button'), new_user_path , class: 'go-to-register btn'%>
   </div>
 </main>

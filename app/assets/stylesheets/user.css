@@ -84,7 +84,6 @@
 .prf-modal-innner {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   margin: 0 auto 1rem auto;
 }
 
