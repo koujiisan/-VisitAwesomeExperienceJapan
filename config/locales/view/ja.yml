@@ -1,7 +1,8 @@
 ja:
   common:
     back_to_top: トップに戻る
-    back_to_show: プロフィールに戻る
+    back_to_prf: プロフィールに戻る
+    back_to_show: 詳細に戻る
     login: ログイン
     logout: ログアウト
   confirm:

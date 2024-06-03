@@ -16,3 +16,6 @@ ja:
         time: 体験日時
         image: 画像
         cost: 体験費用
+      profile:
+        self_introduce: 自己紹介
+        image: アバター

@@ -16,3 +16,6 @@ en:
         time: time
         image: image
         cost: cost
+      profile:
+        self_introduce: self_introduce
+        image: avatar

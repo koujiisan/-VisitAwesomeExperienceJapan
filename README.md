@@ -61,8 +61,9 @@ Xなど他のSNSにも同時に投稿する機能　各SNSのAPIを通じて実�
 他社の投稿の共有機能 各SNSのAPIを通じて実装
 
 ## 画面遷移図
-[VAEJ 画面遷移図](https://www.figma.com/file/Q4ikK8NSb2fQ31bqdwDKQe/VAEJ%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8?type=design&node-id=0%3A1&mode=design&t=3qQUyqQMKxsFDmSw-1)
+[VAEJ 画面遷移図](https://www.figma.com/board/Vik9KJ6KiPndl8VT1LGJBJ/VisitAwesomeExperienceJapan?node-id=0-1&t=p3dOv3ZJb06G8zZw-1)
+![](https://gyazo.com/cb871b58aed76fefa582ab0b58a36778.png)
 
 ## ER図
-[VAEJ ER図](https://app.diagrams.net/#G1UoNMHhBSxRdIYDfrtg_j3hLtrrZasPlY#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D)
-![](https://gyazo.com/a5391620442630c9270bbf12a67afe78.png)
+[VAEJ ER図](https://drive.google.com/file/d/1UoNMHhBSxRdIYDfrtg_j3hLtrrZasPlY/view?usp=sharing)
+![](https://i.gyazo.com/aff0cb920811638941f5a400653512c1.png)
